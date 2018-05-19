@@ -15,7 +15,7 @@ All the standard vector operations are available:
 - ```vector.dot(v)``` - Returns the dot product with a given ```Vector v```.
 - ```vector.mag``` - Returns the magnitude of the vector.
 - ```vector.norm``` - Returns the normalization of the vector.
-- ```vector.proj(v)``` - Retruns the vector projection onto a given ```Vector v```.
-- ```vector.scalar(a)``` - Multiples the vector by a scalar ```a```.
+- ```vector.proj(v)``` - Returns the vector projection onto a given ```Vector v```.
+- ```vector.scalar(a)``` - Multiples the vector by the scalar ```a```.
 - ```vector.theta(v)``` - Returns the angle made with a given ```Vector v```.
 
