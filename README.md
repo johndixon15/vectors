@@ -10,4 +10,5 @@ v = new Vector(1, 2, 3)  # => <1, 2, 3>
 
 All the standard vector operations are available:
 - ```vector.mag()```  -  Returns the magnitude of the vector.
-- ```vector.scalar(a)``` - Multiples the vector by a scalar *a*.
+- ```vector.scalar(a)``` - Multiples the vector by a scalar ```a```.
+- ```vector.dot(v)``` - Returns the dot product with a given ```Vector v```.
