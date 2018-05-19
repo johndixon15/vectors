@@ -25,7 +25,6 @@ class Vector:
 
 
     # returns the magnitude of the vector
-    @property
     def mag(self):
        return math.sqrt(math.pow(self.x, 2) + math.pow(self.y, 2) + math.pow(self.z, 2))
 
@@ -35,7 +34,6 @@ class Vector:
         return Vector(self.x * m, self.y * m, self.z * m)
 
     # returns the normalization of the vector
-    @property
     def norm(self):
         return Vector((self.x/self.mag), (self.y/self.mag), (self.z/self.mag))
 
