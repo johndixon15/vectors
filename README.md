@@ -9,5 +9,5 @@ v = new Vector(1, 2, 3)  # => <1, 2, 3>
 ```
 
 All the standard vector operations are available:
-```vector.mag()```
+- ```vector.mag()```
   Returns the magnitude of the vector.
