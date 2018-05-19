@@ -7,3 +7,7 @@ A ```Vector``` object can be created by assigning it either two or three compone
 v = new Vector(1, 2)     # => <1, 2>
 v = new Vector(1, 2, 3)  # => <1, 2, 3>
 ```
+
+All the standard vector operations are available:
+```python vector.mag()```
+  Returns the magnitude of the vector.
