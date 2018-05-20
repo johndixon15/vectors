@@ -3,6 +3,7 @@
 #
 
 import math
+import types
 
 # needs support for a + b, c*a
 class Vector:
@@ -23,8 +24,17 @@ class Vector:
         else:
             return "<{}, {}, {}>".format(self.x, self.y, self.z)
 
+    # vector addition
+    def __add__(self, other):
+        return Vector((self.x + other.x), (self.y + other.y), (self.z + other.z));
+
+    # vector subtraction
+    def __sub__(self, other):
+        return Vector((self.x - other.x), (self.y - other.y), (self.z - other.z));
+
 
     # returns the magnitude of the vector
+    @property
     def mag(self):
        return math.sqrt(math.pow(self.x, 2) + math.pow(self.y, 2) + math.pow(self.z, 2))
 
@@ -34,6 +44,7 @@ class Vector:
         return Vector(self.x * m, self.y * m, self.z * m)
 
     # returns the normalization of the vector
+    @property
     def norm(self):
         return Vector((self.x/self.mag), (self.y/self.mag), (self.z/self.mag))
 
@@ -65,4 +76,14 @@ class Vector:
     def proj(self, vector):
         return vector.norm.scalar(self.dot(vector.norm))
 
+    # defines the '*' operator to give either the scalar multiplication or the cross product
+    def __mul__(self, other):
 
+        if (isinstance(other, types.IntType)):
+           return self.scalar(other)
+        if (isinstance(other, Vector)):
+           return self.cross(other)
+
+
+    def __rmul__(self, other):
+        return self.scalar(other)
